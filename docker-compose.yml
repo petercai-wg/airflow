@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  my-airflow:
+
+    image: my-airflow:latest
+
+    volumes:
+
+      - ./mount_tmp:/opt/airflow
+
+    ports:
+
+      - "8080:8080"
+
+    command: airflow standalone
